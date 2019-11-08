@@ -11,7 +11,7 @@ export const abTestsOptions: AbTestOptions[] = [
   {
     versions: ['old2', 'new2'],
     versionForCrawlers: 'new2',
-    weights: { new2: 99 },
+    weights: { new2: 50 },
     scope: 'ages',
   },
 ];

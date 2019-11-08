@@ -6,6 +6,26 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53040397-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-53040397-2');
+  </script>
+  <script>
+    function handleOutboundLinkClicks(value) {
+      gtag('event', 'click', {
+        send_to: 'UA-53040397-2',
+        event_category: 'outbound',
+        event_action: 'click',
+        event_label: value
+      });
+      console.log('ga called with: ' + value);
+    }
+  </script>
 </head>
 <body>
   <app-root></app-root>
